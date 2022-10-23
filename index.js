@@ -61,19 +61,19 @@ cardArray.sort(()=>0.5 -Math.random());
 
 // compare the array elements ,  that they are smaller or larger than 0.5 or not  and randomly shuffle it
 
-
-
-
  const gridDisplay= document.querySelector('#grid');
 
+ // we want an array to store the cards that are chosen
+ // so we create a variable cardsChosen
+ // and we want to store the name of the card that is chosen
  const cardsChosen = [];
 
  function createBorad (){
 
-  // for 12 images we need 12 cards to show 
-  // so we use a for loop to create 12 cards
-  //because we have 12 images in the array
-  //basically we are creating 12 cards and adding the images to it
+                               // for 12 images we need 12 cards to show 
+                               // so we use a for loop to create 12 cards
+                               //because we have 12 images in the array
+                               //basically we are creating 12 cards and adding the images to it
 
   
    for(let i =0 ; i<cardArray.length;i++){
@@ -86,10 +86,7 @@ cardArray.sort(()=>0.5 -Math.random());
 
   card.addEventListener('click',flipCard);
 
-  gridDisplay.appendChild(card)
-
-  // console.log(card , i);
-
+  gridDisplay.appendChild(card);
    }
  }
 
@@ -97,7 +94,7 @@ cardArray.sort(()=>0.5 -Math.random());
  createBorad();
 
  function checkMatch(){
-
+    console.log("checking for match");
  }
 
  function flipCard(){
@@ -109,8 +106,8 @@ cardArray.sort(()=>0.5 -Math.random());
     this.setAttribute('src',cardArray[cardId].img);
 
     if(cardsChosen.length===2){
-      
-      settimeout(checkMatch,500);
+
+      setTimeout(checkMatch,400);
     }
 
   
