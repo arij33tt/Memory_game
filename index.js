@@ -89,12 +89,23 @@ cardArray.sort(()=>0.5 -Math.random());
   gridDisplay.appendChild(card);
    }
  }
+ console.log(cardArray);
 
  
  createBorad();
 
  function checkMatch(){
+
+  document.querySelectorAll('img')
+
     console.log("checking for match");
+    
+if(cardsChosen[0]=== cardsChosen[1]){
+
+  alert("you found a match");
+}
+
+
  }
 
  function flipCard(){
@@ -107,7 +118,7 @@ cardArray.sort(()=>0.5 -Math.random());
 
     if(cardsChosen.length===2){
 
-      setTimeout(checkMatch,400);
+      setTimeout(checkMatch,200);
     }
 
   
